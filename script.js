@@ -27,9 +27,5 @@ document.getElementById('copyBtn').addEventListener('click', e => {
   }).catch(() => { btn.textContent = 'Copy failed'; });
 });
 
-// Accent color picker
-const sw = document.querySelectorAll('.sw');
-sw.forEach(b => b.addEventListener('click', () => {
-  document.documentElement.dataset.accent = b.dataset.c;
-  sw.forEach(x => x.setAttribute('aria-pressed', x === b));
-}));
+// Print or save the page as a PDF
+document.getElementById('printBtn').addEventListener('click', () => window.print());
