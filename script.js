@@ -26,3 +26,10 @@ document.getElementById('copyBtn').addEventListener('click', e => {
     setTimeout(() => btn.textContent = 'Copy email', 1500);
   }).catch(() => { btn.textContent = 'Copy failed'; });
 });
+
+// Accent color picker
+const sw = document.querySelectorAll('.sw');
+sw.forEach(b => b.addEventListener('click', () => {
+  document.documentElement.dataset.accent = b.dataset.c;
+  sw.forEach(x => x.setAttribute('aria-pressed', x === b));
+}));

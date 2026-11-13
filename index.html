@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-accent="blue">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,14 +7,15 @@
 <meta name="description" content="Resume of Syed Saboor Ali: sales executive, web designer and CS student.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="layout">
   <header class="side">
     <div class="side-top">
-      <h1>Syed Saboor Ali</h1>
+      <div class="photo"><span>SA</span><img src="photo.jpg" alt="Syed Saboor Ali" onerror="this.remove()"></div>
+      <h1 style="margin-top:1.2rem">Syed Saboor Ali</h1>
       <p class="role"><strong>Sr. Sales Executive</strong><br>Front Sales, Upselling &amp; Cross-Selling<br>Upwork Closer<br>Project Management<br>Websites &amp; Design</p>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
     </div>
@@ -28,6 +29,12 @@
       <a href="#achievements">Achievements</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="swatches" role="group" aria-label="Accent color">Color
+      <button class="sw" data-c="blue" aria-label="Blue" aria-pressed="true"></button>
+      <button class="sw" data-c="coral" aria-label="Coral" aria-pressed="false"></button>
+      <button class="sw" data-c="green" aria-label="Green" aria-pressed="false"></button>
+      <button class="sw" data-c="amber" aria-label="Amber" aria-pressed="false"></button>
+    </div>
   </header>
 
   <main>
@@ -35,7 +42,7 @@
       <h2>About</h2>
       <p>I'm a sales professional who sells websites, development work and digital services. I work with agencies, business owners and stakeholders, and I handle the whole client journey: discovery, proposal, delivery coordination and long-term retention.</p>
       <p>At JTech Solutions I'm the primary closer for Upwork leads and the contact for partner agencies, and I manage each project from requirements to milestones so it ships on time and within scope. Before that I spent nearly four years at VictorTech, moving from content writing to upselling and project management.</p>
-      <p>I'm studying Computer Science at Iqra University, which helps me talk to technical teams, and I build sites and small apps on the side, from freelance client sites under DesignMaze to Health Shield, a Flask claims portal.</p>
+      <p>I'm studying Computer Science at Iqra University, which helps me talk to technical teams, and I build small apps on the side, like Health Shield, a claims portal in Flask.</p>
     </section>
 
     <section id="experience">
@@ -61,11 +68,6 @@
           <p class="when">Mar 2021 to May 2021, Karachi</p>
           <p>Helped run digital marketing campaigns and wrote content for social media.</p>
         </li>
-        <li>
-          <h3>Founder, DesignMaze</h3>
-          <p class="when">Freelance, ongoing</p>
-          <p>Web design, SEO and digital marketing for small business clients, from first mockup to launch.</p>
-        </li>
       </ol>
     </section>
 
@@ -82,19 +84,17 @@
 
     <section id="skills">
       <h2>Skills</h2>
-      <dl class="skills">
-        <dt>Sales</dt><dd>International sales, front-end sales, strategic upselling, closing Upwork leads, high-level client meetings</dd>
-        <dt>Management</dt><dd>Account management, project management, agency coordination, stakeholder management</dd>
-        <dt>Building</dt><dd>HTML, CSS, JavaScript, WordPress and Elementor, Wix, Webflow, Shopify, basic Python and Flask</dd>
-        <dt>Marketing</dt><dd>Digital marketing, SEO audits, content writing, social media management</dd>
-        <dt>Design</dt><dd>Graphic design, website mockups</dd>
-      </dl>
+      <div class="sg"><h3>Sales</h3><div class="pills"><span>International sales</span><span>Front-end sales</span><span>Strategic upselling</span><span>Closing Upwork leads</span><span>Client meetings</span></div></div>
+      <div class="sg"><h3>Management</h3><div class="pills"><span>Account management</span><span>Project management</span><span>Agency coordination</span><span>Stakeholder management</span></div></div>
+      <div class="sg"><h3>Building</h3><div class="pills"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>WordPress</span><span>Elementor</span><span>Wix</span><span>Webflow</span><span>Shopify</span><span>Python</span><span>Flask</span></div></div>
+      <div class="sg"><h3>Marketing</h3><div class="pills"><span>Digital marketing</span><span>SEO audits</span><span>Content writing</span><span>Social media</span></div></div>
+      <div class="sg"><h3>Design</h3><div class="pills"><span>Graphic design</span><span>Website mockups</span></div></div>
     </section>
 
     <section id="education">
       <h2>Education</h2>
-      <h3>BS Computer Science, Iqra University</h3>
-      <p class="when">Oct 2022 to present, Karachi</p>
+      <div class="edu"><h3>BS Computer Science, Iqra University</h3>
+      <p class="when">Oct 2022 to present, Karachi</p></div>
     </section>
 
     <section id="certifications">
